@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
+
+	<link rel="stylesheet"  href="libs/jQM-flat/jquery.mobile.flatui.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+	<script type="text/javascript" src="libs/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.3.2.min.js"></script>
+
+	<script type="text/javascript" src="js/alih-aksara.min.js"></script>
+	<script type="text/javascript" src="js/function.js"></script>
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+
+	<title>Konverter Aksara Daerah</title>
+</head>
+<body>
+    <div id="app" style="display:initial;">				    
+        <!-- Home Page -->
+		<div id="home-page" data-role="page">
+			<img src="img/header-materi.png" style="width:100%">
+            <div data-role="content" >
+				<div id="menu">
+					<ul data-role="listview">
+						<li class="btn-menu-utama">
+							<a href="#menu-aksara-page"  >
+								<img src="img/Icon%20Materi/konverter.png" alt="">
+								<h2><b>MULAI</b></h2>
+							</a>
+						</li>
+						<li class="btn-menu-utama">
+							<a href="#" onmousedown="alert('Panduan belum tersedia')">
+								<img src="img/Icon%20Materi/panduan.png" alt="">
+								<h2><b>PANDUAN</b></h2>
+							</a>
+						</li>	
+						<li class="btn-menu-utama">
+							<a href="http://tokopedia.com/ascomp">
+								<img src="img/Icon%20Materi/merchandise.png" alt="">
+								<h2><b>MERCHANDISE</b></h2>
+							</a>
+						</li>	
+						<li class="btn-menu-utama">
+							<a href="#about-page">
+								<img src="img/Icon%20Materi/about.png" alt="">
+								<h2><b>TENTANG KAMI</b></h2>
+							</a>
+						</li>	
+						<li class="btn-menu-merah">
+							<a href="#" onclick="navigator.app.exitApp()">
+								<img src="img/Icon%20Materi/exit.png" alt="">
+								<h2><b>KELUAR</b></h2>
+							</a>
+						</li>
+					</ul>			
+                </div>
+            </div>
+        </div><!-- /page  -->
+		
+		<!-- Menu Aksara Page -->
+		<div id="menu-aksara-page" data-role="page">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+			<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+			<h1>Pilih Aksara</h1>
+		</div>
+			<img src="img/header-materi.png" style="width:100%">
+            <div data-role="content" >
+				<div id="menu">
+					<ul data-role="listview">
+						<li class="btn-menu-utama" data-theme="b">
+							<a href="#jawa-page">
+								<img src="img/Icon%20Materi/konverter.png" alt="">
+								<h2><b>Aksara Jawa</b></h2>
+							</a>
+						</li>
+						<li class="btn-menu-utama" data-theme="b">
+							<a href="#sunda-page"  >
+								<img src="img/Icon%20Materi/konverter.png" alt="">
+								<h2><b>Aksara Sunda</b></h2>
+							</a>
+						</li>
+						<li class="btn-menu-utama" data-theme="b">
+							<a href="#lontara-makassar-page"  >
+								<img src="img/Icon%20Materi/konverter.png" alt="">
+								<h2><b>Aksara Lontara</b></h2>
+								<p>(Makassar)</p>
+							</a>
+						</li>
+						<li class="btn-menu-utama" data-theme="b">
+							<a href="#mandailing-page"  >
+								<img src="img/Icon%20Materi/konverter.png" alt="">
+								<h2><b>Aksara Batak</b></h2>
+								<p>(Mandailing)</p>
+							</a>
+						</li>
+						<li class="btn-menu-utama" data-theme="b">
+							<a href="#Simalungun"  >
+								<img src="img/Icon%20Materi/konverter.png" alt="">
+								<h2><b>Aksara Batak</b></h2>
+								<p>(Simalungun)</p>
+							</a>
+						</li>
+						<li class="btn-menu-utama" data-theme="b">
+							<a href="#rejang-page"  >
+								<img src="img/Icon%20Materi/konverter.png" alt="">
+								<h2><b>Aksara Rejang</b></h2>
+							</a>
+						</li>
+						<li class="btn-menu-utama" data-theme="b">
+							<a href="#mbojo-page"  >
+								<img src="img/Icon%20Materi/konverter.png" alt="">
+								<h2><b>Aksara Mbojo</b></h2>
+							</a>
+						</li>
+					</ul>			
+                </div>
+            </div>
+        </div><!-- /page  -->
+		
+		<div  id="lontara-makassar-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<h1>Lontara (Makassar)</h1>
+			</div>
+			<div data-role="content" style="font-size: 16px;">
+				<p>Aksara Latin</p>
+				<textarea id="txt-latin-makassar" class="latin"></textarea>
+				<hr/>
+				Aksara Lontara (Makassar): 	
+				<br/>
+				<textarea id="txt-aksara-makassar" class="lokal font-prada"></textarea>
+				<hr/>
+				</div>
+		</div>
+		
+		<div  id="rejang-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<h1>Aksara Rejang</h1>
+			</div>
+			<div data-role="content" style="font-size: 16px;">
+				<p>Aksara Latin:</p>
+				<textarea id="txt-latin-rejang" class="latin"></textarea>
+				<hr/>
+				Aksara Rejang:	
+				<br/>
+				<textarea id="txt-aksara-rejang" class="lokal font-prada"></textarea>
+				<hr/>
+				</div>
+		</div>
+		
+		<div  id="mandailing-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<h1>Aksara Batak (Mandailing)</h1>
+			</div>
+			<div data-role="content" style="font-size: 16px;">
+				<p>Aksara Latin:</p>
+				<textarea id="txt-latin-mandailing" class="latin"></textarea>
+				<hr/>
+				Aksara Batak (Mandailing):	
+				<br/>
+				<textarea id="txt-aksara-mandailing" class="lokal font-prada"></textarea>
+				<hr/>
+				</div>
+		</div>
+		
+		<div  id="simalungun-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<h1>Aksara Batak (Simalungun)</h1>
+			</div>
+			<div data-role="content" style="font-size: 16px;">
+				<p>Aksara Latin:</p>
+				<textarea id="txt-latin-simalungun" class="latin"></textarea>
+				<hr/>
+				Aksara Batak (Simalungun):	
+				<br/>
+				<textarea id="txt-aksara-simalungun" class="lokal font-prada"></textarea>
+				<hr/>
+				</div>
+		</div>
+		
+		<div  id="mbojo-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<h1>Aksara Mbojo</h1>
+			</div>
+			<div data-role="content" style="font-size: 16px;">
+				<p>Aksara Latin:</p>
+				<textarea id="txt-latin-mbojo" class="latin"></textarea>
+				<hr/>
+				Aksara Mbojo:	
+				<br/>
+				<textarea id="txt-aksara-mbojo" class="lokal font-mbojo"></textarea>
+				<hr/>
+				</div>
+		</div>
+		
+		<div  id="sunda-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<h1>Aksara Sunda</h1>
+			</div>
+			<div data-role="content" style="font-size: 16px;">
+				<p>Aksara Latin:</p>
+				<textarea id="txt-latin-sunda" class="latin"></textarea>
+				<button onclick="insertChar('txt-latin-sunda','É')" data-inline="true" data-theme="f">É</button>
+				<button onclick="insertChar('txt-latin-sunda','Ê')"  data-inline="true" data-theme="f">Ê</button>
+				<button onclick="insertChar('txt-latin-sunda','é')" data-inline="true" data-theme="f">é</button>
+				<button onclick="insertChar('txt-latin-sunda','ê')"  data-inline="true" data-theme="f">ê</button>
+				<br/>
+				<hr/>
+				Aksara Sunda:	
+				<br/>
+				<textarea id="txt-aksara-sunda" class="lokal font-prada"></textarea>
+				<hr/>
+				</div>
+		</div>
+		
+		<div  id="jawa-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<h1>Aksara Jawa</h1>
+			</div>
+			<div data-role="content" style="font-size: 16px;">
+				<p>Aksara Latin:</p>
+				<textarea id="txt-latin-jawa" class="latin"></textarea>
+				<button onclick="insertChar('txt-latin-jawa','É')" data-inline="true" data-theme="f">É</button>
+				<button onclick="insertChar('txt-latin-jawa','Ê')"  data-inline="true" data-theme="f">Ê</button>
+				<button onclick="insertChar('txt-latin-jawa','é')" data-inline="true" data-theme="f">é</button>
+				<button onclick="insertChar('txt-latin-jawa','ê')"  data-inline="true" data-theme="f">ê</button><br/>
+				<hr/>
+				Aksara Jawa:	
+				<br/>
+				<textarea id="txt-aksara-jawa" class="lokal font-pustaka"></textarea>
+				<hr/>
+				</div>
+		</div>
+		
+		<div  id="about-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<h1>Tentang Kami</h1>
+			</div>
+			<div data-role="content" style="font-size: 16px;text-align:center;">
+				<h2>Aksara di Nusantara</h2>
+				<a href="http://aksaradinusantara.com" data-role="button" data-theme="d">Kunjungi Web</a>
+				<a href="http://facebook.com/aksaradinusantara" data-role="button" data-theme="d">Kunjungi Facebook</a>
+				<hr/>
+				<br/>
+				<br/>
+				<h2>MakruvaTech</h2>
+				<a href="http://makruvatech.com" data-role="button" data-theme="d">Kunjungi Web</a>
+				<hr/>
+				<br/>
+				<br/>
+		</div>
+    </div>
+		
+    </body>
+</html>
